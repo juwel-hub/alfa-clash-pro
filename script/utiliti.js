@@ -12,6 +12,10 @@ function settBackgroundColorById(elementId) {
   const element = document.getElementById(elementId);
   element.classList.add("bg-orange-400");
 }
+function removeBackgroundColorById(elementId) {
+  const element = document.getElementById(elementId);
+  element.classList.remove("bg-orange-400");
+}
 
 function getArandomAlphabat() {
   // get or create an alphabat array
@@ -24,4 +28,22 @@ function getArandomAlphabat() {
   const alphabat = alphabates[index];
 
   return alphabat;
+}
+
+function getElementTextById(elementId) {
+  const element = document.getElementById(elementId);
+  const text = element.innerText;
+  return text;
+}
+
+// score and life ar another way
+function getTextElementValuById(elementId) {
+  const element = document.getElementById(elementId);
+  const elementValuText = element.innerText;
+  const value = parseInt(elementValuText);
+  return value;
+}
+function setTextElementValue(elementId, value) {
+  const element = document.getElementById(elementId);
+  element.innerText = value;
 }
